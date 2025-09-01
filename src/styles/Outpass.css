@@ -1,0 +1,138 @@
+:root {
+  --primary-color: #00809D;
+  --text-light: #ffffff;
+  --text-dark: #333333;
+  --radius: 6px;
+  --shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  --font-main: Arial, sans-serif;
+  --form-width: 600px;
+  --textarea-height: 130px;
+  --button-width: 140px;
+  --button-height: 30px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-main);
+}
+
+#outpass-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  min-height: 100vh;
+}
+
+#outpass-h2 {
+  text-align: center;
+  margin-top: -100px;
+  font-size: 30px;
+  color: var(--text-light);
+}
+
+#outpass-form-container {
+  background: var(--text-light);
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  width: var(--form-width);
+  max-width: 95%;
+  text-align: center;
+  margin: 30px;
+  height: 470px;
+}
+
+#outpass-form-container label {
+  font-weight: bold;
+  color: var(--text-dark);
+  display: block;
+  margin: 5px;
+  text-align: center;
+}
+
+#outpass-form-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: var(--radius);
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 20px;
+  color: var(--text-light);
+  background-color: var(--primary-color);
+  resize: vertical;
+}
+
+#outpass-textarea {
+  width: 90%;
+  height: 150px;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  color: var(--text-light);
+  background-color: var(--primary-color);
+  resize: vertical;
+}
+
+.outpass-btn, #outpass-btn-1, #outpass-btn-2 {
+  width: var(--button-width);
+  height: var(--button-height);
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  font-size: large;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  #outpass-form-container {
+    width: 90%;
+    padding: 20px;
+    height: auto;
+  }
+
+  #outpass-h2 {
+    font-size: 26px;
+    margin-top: 20px;
+  }
+
+  #outpass-form-container input,
+  #outpass-textarea {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .outpass-btn, #outpass-btn-1, #outpass-btn-2 {
+    width: 120px;
+    height: 35px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #outpass-h2 {
+    font-size: 22px;
+    margin-top: -100px;
+  }
+
+   #outpass-form-container input {
+     padding: 10px;
+    font-size: 14px;
+    width: 150px;
+   }
+  #outpass-textarea {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .outpass-btn, #outpass-btn-1, #outpass-btn-2 {
+    width: 100px;
+    height: 30px;
+  }
+}

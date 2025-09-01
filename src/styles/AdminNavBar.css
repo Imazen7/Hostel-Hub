@@ -1,0 +1,137 @@
+:root {
+  --primary-color: #00809D;
+  --secondary-color: #f0f0f0;
+  --text-light: #ffffff;
+  --text-dark: #000000;
+  --hover-bg: rgba(255, 255, 255, 0.1);
+  --font-family: Arial, Helvetica, sans-serif;
+  --font-size-lg: 24px;
+  --font-size-md: 16px;
+  --navbar-height: 130px;
+  --btn-height: 50px;
+  --radius: 5px;
+  --transition: 0.3s ease;
+  --shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+  background-color: #44444E; 
+  color: var(--text-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+  box-shadow: var(--shadow);
+  height: var(--navbar-height);
+  font-family: var(--font-family);
+  position: relative;
+  z-index: 1000;
+  width: 100%;
+  margin-bottom: -140px;
+}
+
+.navbar-logo {
+  font-size: var(--font-size-lg);
+  font-weight: bold;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  padding-right: 90px;
+}
+
+.navbar-menu li button {
+  background: none;
+  border: none; 
+  color: var(--text-light); 
+  font-size: 22px;
+  cursor: pointer;
+  transition: color var(--transition);
+}
+
+.navbar-menu li button:hover {
+  text-decoration: underline;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: var(--text-light);
+  cursor: pointer;
+  z-index: 1100;
+}
+
+
+
+@media (max-width: 1024px) {
+  .hamburger {
+    display: block;
+    margin-left: auto;
+  }
+
+  .navbar-menu {
+    display: none;
+    padding-right: 0;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    background: var(--primary-color);
+    z-index: 1000;
+    gap: 20px;
+    padding-top: 50px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; 
+  }
+
+  .navbar-menu li {
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-menu li button {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--text-light);
+    width: 100%;
+    padding: 12px 0;
+  }
+
+  .navbar-menu li button:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 20px;
+    height: auto;
+  }
+
+  .navbar-logo {
+    font-size: 20px;
+  }
+
+  .hamburger {
+    font-size: 26px;
+  }
+
+  .navbar-menu li button {
+    font-size: 18px;
+    padding: 10px 0;
+  }
+}

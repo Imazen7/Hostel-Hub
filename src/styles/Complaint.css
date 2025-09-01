@@ -1,0 +1,138 @@
+:root {
+  --primary-color: #00809D;
+  --text-light: #ffffff;
+  --text-dark: #333333;
+  --radius: 6px;
+  --shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  --font-main: Arial, sans-serif;
+  --form-width: 600px;
+  --textarea-height: 150px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-main);
+}
+
+#complaint-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  min-height: 100vh;
+}
+
+#complaint-h2 {
+  text-align: center;
+  margin-top: -180px;
+  font-size: 30px;
+  color: var(--text-light);
+}
+
+#complaint-form {
+  background: var(--text-light);
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  width: var(--form-width);
+  max-width: 95%;
+  text-align: center;
+  margin: 30px;
+  height: 420px;
+}
+
+#complaint-form label {
+  font-weight: bold;
+  color: var(--text-dark);
+  display: block;
+  margin: 5px;
+  text-align: center;
+}
+
+#complaint-form select {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: var(--radius);
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 16px;
+  color: var(--text-light);
+  background-color: var(--primary-color);
+}
+
+#complaint-textarea {
+  width: 90%;
+  height: 150px;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  color: var(--text-light);
+  background-color: var(--primary-color);
+  resize: vertical;
+}
+
+option {
+  background-color: #333;
+}
+
+#submit-btn {
+  width: 150px;
+  height: 50px;
+  margin-top: 20px;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  font-size: 15px;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  #complaint-form {
+    width: 90%;       
+    padding: 20px;
+    height: auto;     
+  }
+
+  #complaint-h2 {
+    font-size: 26px;  
+    margin-top: 20px;
+  }
+
+  #complaint-form select,
+  #complaint-textarea {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  #submit-btn {
+    width: 120px;
+    height: 45px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #complaint-h2 {
+    font-size: 22px;
+    margin-top: -130px;
+  }
+
+  #complaint-form select,
+  #complaint-textarea {
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  #submit-btn {
+    width: 150px;
+    height: 40px;
+    font-size: 13px;
+  }
+}

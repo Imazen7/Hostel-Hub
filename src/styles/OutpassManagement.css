@@ -1,0 +1,157 @@
+.outpass-container {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+.page-title {
+  text-align: center;
+  color: #00809D;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.student-list {
+  list-style: none;
+  padding: 0;
+}
+
+.student-card {
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.action-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.btn.show {
+  background-color: #00809D;
+  color: white;
+}
+
+.btn.leave-otp {
+  background-color: #4caf50;
+  color: white;
+}
+
+.btn.return-otp {
+  background-color: #f44336;
+  color: white;
+}
+
+.status-label {
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.status-pending {
+  background-color: #ff9800;
+  color: white;
+}
+
+.status-active {
+  background-color: #4caf50;
+  color: white;
+}
+
+.status-returned {
+  background-color: #9c27b0;
+  color: white;
+}
+
+
+
+@media (max-width: 1024px) {
+  .student-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .action-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .btn {
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .outpass-container {
+    padding: 15px;
+  }
+
+  .page-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .student-card {
+    padding: 12px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 10px;
+    min-width: 100px;
+  }
+
+  .search-bar {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .student-card {
+    gap: 10px;
+  }
+
+  .btn {
+    font-size: 13px;
+    padding: 6px 8px;
+    min-width: unset;
+    flex: 1 1 45%;
+  }
+
+  .action-section {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+}
+    

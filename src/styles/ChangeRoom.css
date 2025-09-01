@@ -1,0 +1,116 @@
+:root {
+  --primary-color: #00809D;
+  --secondary-color: #1C352D;
+  --text-light: #ffffff;
+  --text-dark: #333;
+  --radius: 6px;
+  --shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#change-room-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+#change-room-h2 {
+  text-align: center;
+  margin-top: -10px;
+  font-size: 30px;
+  color: var(--text-light);
+}
+
+#change-room-form {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  width: 550px;
+  max-width: 90%; 
+  text-align: center;
+  margin: 30px;
+}
+
+#change-room-form label {
+  font-weight: bold;
+  color: var(--text-dark);
+  display: block;
+  margin: 5px 0;
+  text-align: center;
+}
+
+#change-room-form input {
+  width: 70%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: var(--radius);
+  outline: none;
+  transition: border 0.3s ease;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  font-size: 18px;
+}
+
+#change-room-form input::placeholder {
+  color: var(--text-light);
+}
+
+#text-area-1 {
+  width: 90%;
+  height: 150px;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  color: var(--text-light);
+  background-color: var(--primary-color);
+  resize: vertical;
+}
+
+@media (max-width: 1024px) {
+  #change-room-form {
+    width: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  #change-room-h2 {
+    font-size: 24px;
+  }
+
+  #change-room-form {
+    width: 100%;
+    padding: 20px;
+  }
+
+  #change-room-form input {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  #text-area-1 {
+    width: 100%;
+    padding: 15px;
+  }
+}
+@media (max-width: 480px) {
+  #change-room-form {
+    height: 530px;
+  }
+  #change-room-h2 {
+    margin-top: 5px;
+  }
+}

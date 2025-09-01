@@ -1,0 +1,122 @@
+.complaints-container {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.page-title {
+  text-align: center;
+  color: #00809d;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.complaints-list {
+  list-style: none;
+  padding: 0;
+}
+
+.complaint-card {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.complaint-card h3 {
+  margin: 0;
+  color: #00809d;
+}
+
+.complaint-card p {
+  margin: 5px 0 0;
+  color: #555;
+  font-size: 0.9rem;    
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.btn.show {
+  background-color: #00809d;
+  color: white;
+}
+
+.btn.status-btn {
+  color: white;
+  font-weight: bold;
+}
+
+.status-pending {
+  background-color: #666;
+}
+
+.status-fixed {
+  background-color: green;
+}
+
+@media (max-width: 768px) {
+  .complaint-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .action-buttons {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .btn {
+    flex: 1;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .page-title {
+    font-size: 22px;
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 20px;
+    margin-top: 80px;
+  }
+
+  .complaint-card h3 {
+    font-size: 16px;
+  }
+
+  .complaint-card p {
+    font-size: 13px;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 8px;
+  }
+}

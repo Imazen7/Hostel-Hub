@@ -1,0 +1,133 @@
+:root {
+  --primary-color: #00809D;
+  --secondary-color: #1C352D;
+  --hover-color: #568F87;
+  --text-light: #FFFFFF;
+  --text-dark: #000000;
+  --radius: 5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bookroom-container {
+  padding: 20px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  background-color: var(--primary-color);
+}
+
+.select-block {
+  color: var(--text-light);
+  font-size: 2rem;
+}
+
+.page-title {
+  font-size: 30px;
+  margin: 20px 0;
+  color: var(--text-light);
+}
+
+.form-group {
+  margin: 15px 0;
+  font-size: 1.1rem;
+}
+
+select {
+  padding: 8px 12px;
+  margin-left: 10px;
+  border-radius: var(--radius);
+  border: 1px solid #ccc;
+}
+
+.rooms-container {
+  margin-top: 20px;
+}
+
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); 
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.room-btn {
+  padding: 10px;
+  border: 1px solid var(--text-dark);
+  background-color: white;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.room-btn:hover {
+  background-color: var(--hover-color);
+  color: var(--text-light);
+}
+
+.room-btn.selected {
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+}
+
+.room-btn.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.selected-info {
+  margin-top: 20px;
+  font-weight: bold;
+  color: var(--text-light);
+  height: 170px;
+}
+
+.confirm-book {
+  margin-top: 15px;
+  color: var(--text-light);
+  background-color: var(--secondary-color);
+  width: 100px;
+  height: 50px;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.confirm-book:hover {
+  background-color: var(--hover-color);
+}
+
+@media (max-width: 1024px) {
+  .rooms-grid {
+    grid-template-columns: repeat(4, 1fr); 
+  }
+}
+
+@media (max-width: 768px) {
+  .select-block {
+    font-size: 1.4rem;
+  }
+
+  .page-title {
+    font-size: 24px;
+  }
+
+  .rooms-grid {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  .room-btn {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .confirm-book {
+    width: 80%;
+    height: 45px;
+    font-size: 16px;
+  }
+}
