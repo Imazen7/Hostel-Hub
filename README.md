@@ -22,7 +22,7 @@ Admin Features:
 
 Tech Stack:
 - Frontend: React.js, Vite, CSS  
-- Backend / Database: Firebase (Authentication, Firestore, Storage)  
+- Backend / Database: Firebase (Authentication, Firestore)  
 - Version Control: Git & GitHub  
 
 
