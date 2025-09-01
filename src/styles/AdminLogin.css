@@ -1,4 +1,4 @@
-:root {
+  :root {
   --primary-color: #00809D;
   --primary-hover: #006b80;
   --secondary-color: #F3E2D4;
@@ -170,9 +170,9 @@
 
   #admin-login-form button,
   #login-page {
-    font-size: 0.9rem;
-    padding: 10px;
-    height: 40px;
+    font-size: 18px;
+    padding: 1px;
+    height: 50px;
     line-height: normal;
   }
 
