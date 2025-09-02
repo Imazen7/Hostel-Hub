@@ -45,9 +45,53 @@ const Profile = () => {
     setFormData((prev) => ({ ...prev, [id]: value }));
   };
 
+  const validateForm = () => {
+    // Phone: must be 10 digits
+    if (!/^\d{10}$/.test(formData.phone)) {
+      alert("Phone number must be exactly 10 digits.");
+      return false;
+    }
+
+    const dob = new Date(formData.dob);
+    if (isNaN(dob.getTime())) {
+      alert("Please enter a valid Date of Birth.");
+      return false;
+    }
+
+    const day = dob.getUTCDate();
+    const month = dob.getUTCMonth() + 1; 
+    const year = dob.getUTCFullYear();
+
+    if (day < 1 || day > 30) {
+      alert("Day must be between 01 and 30.");
+      return false;
+    }
+    if (month < 1 || month > 12) {
+      alert("Month must be between 01 and 12.");
+      return false;
+    }
+
+    const today = new Date();
+    const age = today.getFullYear() - year;
+    const monthDiff = today.getMonth() - dob.getMonth();
+    const dayDiff = today.getDate() - dob.getDate();
+
+    const adjustedAge =
+      monthDiff < 0 || (monthDiff === 0 && dayDiff < 0) ? age - 1 : age;
+
+    if (adjustedAge < 17 || adjustedAge > 35) {
+      alert("Age must be between 17 and 35 years.");
+      return false;
+    }
+
+    return true;
+  };
+
   const handleSave = async (e) => {
     e.preventDefault();
     if (!user) return;
+
+    if (!validateForm()) return; 
 
     setSaving(true);
 
