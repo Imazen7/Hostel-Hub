@@ -93,6 +93,7 @@
 
   .no-room-msg {
   color: var(--text-light);
+  margin-top: 10px;
   }
 
   .vacate-container h2 {
@@ -117,6 +118,7 @@
 
   .no-room-msg {
   color: var(--text-light);
+  margin-top: 10px;
   }
 
   .vacate-form textarea {
