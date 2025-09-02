@@ -46,6 +46,7 @@
 
 .no-room-msg {
   color: var(--text-light);
+  margin-top: 10px;
 }
 
 .vacate-form label {
