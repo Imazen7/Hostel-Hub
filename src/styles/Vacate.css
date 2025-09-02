@@ -44,6 +44,10 @@
   height: 280px;
 }
 
+.no-room-msg {
+  color: var(--text-light);
+}
+
 .vacate-form label {
   font-weight: bold;
   color: var(--text-dark);
@@ -86,6 +90,10 @@
     height: auto;
   }
 
+  .no-room-msg {
+  color: var(--text-light);
+  }
+
   .vacate-container h2 {
     font-size: 26px;
   }
@@ -104,6 +112,10 @@
 @media screen and (max-width: 480px) {
   .vacate-container h2 {
     font-size: 22px;
+  }
+
+  .no-room-msg {
+  color: var(--text-light);
   }
 
   .vacate-form textarea {
