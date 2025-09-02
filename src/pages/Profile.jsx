@@ -46,7 +46,6 @@ const Profile = () => {
   };
 
   const validateForm = () => {
-    // Phone: must be 10 digits
     if (!/^\d{10}$/.test(formData.phone)) {
       alert("Phone number must be exactly 10 digits.");
       return false;
@@ -62,8 +61,8 @@ const Profile = () => {
     const month = dob.getUTCMonth() + 1; 
     const year = dob.getUTCFullYear();
 
-    if (day < 1 || day > 30) {
-      alert("Day must be between 01 and 30.");
+    if (day < 1 || day > 31) {
+      alert("Day must be between 01 and 31.");
       return false;
     }
     if (month < 1 || month > 12) {
