@@ -20,7 +20,7 @@ const SignUp = () => {
 
     try {
       await createUserWithEmailAndPassword(auth, email, password);
-      navigate("/"); // redirect to UserLogin
+      navigate("/"); 
     } catch (error) {
       alert("Sign Up failed: " + error.message);
     }
