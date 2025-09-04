@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { sendPasswordResetEmail } from "firebase/auth";
+import { sendPasswordResetEmail, fetchSignInMethodsForEmail } from "firebase/auth";
 import { auth } from "../firebase";
 import "../styles/Password.css";
 
@@ -10,13 +10,18 @@ const Password = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      const signInMethods = await fetchSignInMethodsForEmail(auth, email);
+      if (signInMethods.length === 0) {
+        alert("This email is not registered. Please sign up first.");
+        return;
+      }
       await sendPasswordResetEmail(auth, email);
       alert("Password reset link sent! Check your email.");
     } catch (error) {
       alert(error.message);
     }
   };
-
+  
   return (
     <>
       <header id="reset-password-header">
@@ -27,7 +32,12 @@ const Password = () => {
           <h2 id="reset-password-h2">Reset Password</h2>
           <form onSubmit={handleSubmit}>
             <label>Email:</label>
-            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
             <div style={{ display: "flex", gap: "10px" }}>
               <input id="submitPassword" type="submit" value="Click" />
               <Link id="link" to="/">Login</Link>
