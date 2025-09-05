@@ -39,7 +39,7 @@ const Complaint = () => {
         setComplaint(null);
         setComplaintType("");
         setComplaintText("");
-      }, 5 * 60 * 1000); // 5 mins
+      }, 5 * 60 * 1000); 
       return () => clearTimeout(timer);
     }
   }, [complaint, user]);
