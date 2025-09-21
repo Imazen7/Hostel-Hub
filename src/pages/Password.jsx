@@ -40,7 +40,7 @@ const Password = () => {
             />
             <div style={{ display: "flex", gap: "10px" }}>
               <input id="submitPassword" type="submit" value="Send Reset Link" />
-              <Link id="link" to="/">Back to Login</Link>
+              <Link id="link" to="/">Login</Link>
             </div>
           </form>
         </div>
