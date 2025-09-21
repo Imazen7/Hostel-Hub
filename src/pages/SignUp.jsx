@@ -62,7 +62,7 @@ const SignUp = () => {
 
             <div style={{ display: 'flex', gap: '1px', padding: '10px'}}>
               <input id='submit' type="submit" value='Sign Up'/>
-              <button><Link id='back-to-login' to='/'>Login</Link></button>
+              <button><Link id='back-to-login' to='/'>Back to Login</Link></button>
             </div>
           </form>
         </div>
